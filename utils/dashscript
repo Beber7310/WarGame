@@ -1,0 +1,22 @@
+#!/bin/sh
+
+a=10
+play=0
+
+until [ $a -lt 10 ]
+do
+        echo Wait Dash Button
+        sudo  /usr/bin/dumpcap -f "ether src 78:e1:03:98:7d:c4 and arp" -c 1
+        echo Dash button pressed!
+        if mpc status|grep playing then
+        	play = 1;
+        else
+        	play = 0;
+        fi
+        
+        mpc pause
+        aplay cettefauteenversmoi2.wav -D plughw:CARD=sndrpihifiberry,DEV=0
+        if [$play eq 1]; the
+        mpc play
+         #a=expr $a + 1`
+done
