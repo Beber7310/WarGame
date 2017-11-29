@@ -2,7 +2,7 @@
 <?fileVersion 4.0.0?><cproject storage_type_id="org.eclipse.cdt.core.XmlProjectDescriptionStorage">
 	<storageModule moduleId="org.eclipse.cdt.core.settings">
 		<cconfiguration id="cdt.managedbuild.config.gnu.cross.exe.debug.744832774">
-			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="cdt.managedbuild.config.gnu.cross.exe.debug.744832774" moduleId="org.eclipse.cdt.core.settings" name="Debug_with_Cross GCC">
+			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="cdt.managedbuild.config.gnu.cross.exe.debug.744832774" moduleId="org.eclipse.cdt.core.settings" name="Debug_with_Cross_GCC">
 				<externalSettings/>
 				<extensions>
 					<extension id="org.eclipse.cdt.core.ELF" point="org.eclipse.cdt.core.BinaryParser"/>
@@ -14,23 +14,59 @@
 				</extensions>
 			</storageModule>
 			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
-				<configuration artifactName="${ProjName}" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.exe" buildProperties="org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.exe,org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.debug" cleanCommand="rm -rf" description="" id="cdt.managedbuild.config.gnu.cross.exe.debug.744832774" name="Debug_with_Cross GCC" parent="cdt.managedbuild.config.gnu.cross.exe.debug">
+				<configuration artifactName="${ProjName}" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.exe" buildProperties="org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.exe,org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.debug" cleanCommand="rm -rf" description="" id="cdt.managedbuild.config.gnu.cross.exe.debug.744832774" name="Debug_with_Cross_GCC" parent="cdt.managedbuild.config.gnu.cross.exe.debug" postannouncebuildStep="D:\user\Bertrand\Documents\GitHub\WarGame\Debug_with_Cross GCC\WarGame" postbuildStep="${ProjDirPath}\utils\deploy.bat  &quot;${ProjDirPath}/debug_with_Cross_GCC/${ProjName}&quot; /home/pi/projects/${ProjName}">
 					<folderInfo id="cdt.managedbuild.config.gnu.cross.exe.debug.744832774." name="/" resourcePath="">
 						<toolChain id="cdt.managedbuild.toolchain.gnu.cross.exe.debug.552365477" name="Cross GCC" superClass="cdt.managedbuild.toolchain.gnu.cross.exe.debug">
+							<option id="cdt.managedbuild.option.gnu.cross.path.104996853" name="Path" superClass="cdt.managedbuild.option.gnu.cross.path" useByScannerDiscovery="false" value="C:\SysGCC\Raspberry\bin" valueType="string"/>
+							<option id="cdt.managedbuild.option.gnu.cross.prefix.151384750" name="Prefix" superClass="cdt.managedbuild.option.gnu.cross.prefix" useByScannerDiscovery="false" value="arm-linux-gnueabihf-" valueType="string"/>
 							<targetPlatform archList="all" binaryParser="org.eclipse.cdt.core.ELF" id="cdt.managedbuild.targetPlatform.gnu.cross.2123792349" isAbstract="false" osList="all" superClass="cdt.managedbuild.targetPlatform.gnu.cross"/>
-							<builder buildPath="${workspace_loc:/WarGame}/Debug_with_Cross GCC" id="cdt.managedbuild.builder.gnu.cross.1566150656" managedBuildOn="true" name="Gnu Make Builder.Debug" superClass="cdt.managedbuild.builder.gnu.cross"/>
-							<tool id="cdt.managedbuild.tool.gnu.cross.c.compiler.754539646" name="Cross GCC Compiler" superClass="cdt.managedbuild.tool.gnu.cross.c.compiler">
-								<option defaultValue="gnu.c.optimization.level.none" id="gnu.c.compiler.option.optimization.level.315717614" superClass="gnu.c.compiler.option.optimization.level" valueType="enumerated"/>
-								<option id="gnu.c.compiler.option.debugging.level.1523206782" superClass="gnu.c.compiler.option.debugging.level" value="gnu.c.debugging.level.max" valueType="enumerated"/>
+							<builder buildPath="${workspace_loc:/WarGame}/Debug_with_Cross GCC" id="cdt.managedbuild.builder.gnu.cross.1566150656" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="Gnu Make Builder" superClass="cdt.managedbuild.builder.gnu.cross"/>
+							<tool command="arm-linux-gnueabihf-gcc" id="cdt.managedbuild.tool.gnu.cross.c.compiler.754539646" name="Cross GCC Compiler" superClass="cdt.managedbuild.tool.gnu.cross.c.compiler">
+								<option defaultValue="gnu.c.optimization.level.none" id="gnu.c.compiler.option.optimization.level.315717614" name="Optimization Level" superClass="gnu.c.compiler.option.optimization.level" useByScannerDiscovery="false" valueType="enumerated"/>
+								<option id="gnu.c.compiler.option.debugging.level.1523206782" name="Debug Level" superClass="gnu.c.compiler.option.debugging.level" useByScannerDiscovery="false" value="gnu.c.debugging.level.max" valueType="enumerated"/>
+								<option id="gnu.c.compiler.option.include.paths.1189986218" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" useByScannerDiscovery="false" valueType="includePath">
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/source}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;C:\SysGCC\Raspberry\arm-linux-gnueabihf\include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/source/gui}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/source/gfx}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/lib/win32_image.2.0.2/include/SDL2}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/lib/win32_ttf.2.0.14/include/SDL2}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/lib/win32_sdl.2.0.7/include/SDL2}&quot;"/>
+								</option>
+								<option id="gnu.c.compiler.option.dialect.std.1668128926" name="Language standard" superClass="gnu.c.compiler.option.dialect.std" useByScannerDiscovery="true" value="gnu.c.compiler.dialect.c11" valueType="enumerated"/>
 								<inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.1207789765" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
 							</tool>
-							<tool id="cdt.managedbuild.tool.gnu.cross.cpp.compiler.1217939782" name="Cross G++ Compiler" superClass="cdt.managedbuild.tool.gnu.cross.cpp.compiler">
-								<option id="gnu.cpp.compiler.option.optimization.level.680252918" superClass="gnu.cpp.compiler.option.optimization.level" value="gnu.cpp.compiler.optimization.level.none" valueType="enumerated"/>
-								<option id="gnu.cpp.compiler.option.debugging.level.149439404" superClass="gnu.cpp.compiler.option.debugging.level" value="gnu.cpp.compiler.debugging.level.max" valueType="enumerated"/>
+							<tool command="arm-linux-gnueabihf-g++" id="cdt.managedbuild.tool.gnu.cross.cpp.compiler.1217939782" name="Cross G++ Compiler" superClass="cdt.managedbuild.tool.gnu.cross.cpp.compiler">
+								<option id="gnu.cpp.compiler.option.optimization.level.680252918" name="Optimization Level" superClass="gnu.cpp.compiler.option.optimization.level" useByScannerDiscovery="false" value="gnu.cpp.compiler.optimization.level.none" valueType="enumerated"/>
+								<option id="gnu.cpp.compiler.option.debugging.level.149439404" name="Debug Level" superClass="gnu.cpp.compiler.option.debugging.level" useByScannerDiscovery="false" value="gnu.cpp.compiler.debugging.level.max" valueType="enumerated"/>
+								<option id="gnu.cpp.compiler.option.include.paths.1033476508" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" useByScannerDiscovery="false" valueType="includePath">
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/source}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/source/openCV}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/source/gui/calibration}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/source/gui/tiledmap}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/source/gui}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/source/gfx}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/lib/win32_ttf.2.0.14/include/SDL2}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/lib/win32_image.2.0.2/include/SDL2}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/lib/win32_sdl.2.0.7/include/SDL2}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;C:\SysGCC\Raspberry\arm-linux-gnueabihf\sysroot\usr\include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;C:\SysGCC\Raspberry\arm-linux-gnueabihf\include&quot;"/>
+								</option>
+								<option id="gnu.cpp.compiler.option.dialect.std.1708713505" name="Language standard" superClass="gnu.cpp.compiler.option.dialect.std" useByScannerDiscovery="true" value="gnu.cpp.compiler.dialect.c++11" valueType="enumerated"/>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.322894668" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
 							</tool>
 							<tool id="cdt.managedbuild.tool.gnu.cross.c.linker.1144876255" name="Cross GCC Linker" superClass="cdt.managedbuild.tool.gnu.cross.c.linker"/>
-							<tool id="cdt.managedbuild.tool.gnu.cross.cpp.linker.2060045245" name="Cross G++ Linker" superClass="cdt.managedbuild.tool.gnu.cross.cpp.linker">
+							<tool command="g++" id="cdt.managedbuild.tool.gnu.cross.cpp.linker.2060045245" name="Cross G++ Linker" superClass="cdt.managedbuild.tool.gnu.cross.cpp.linker">
+								<option id="gnu.cpp.link.option.libs.1449734565" name="Libraries (-l)" superClass="gnu.cpp.link.option.libs" useByScannerDiscovery="false" valueType="libs">
+									<listOptionValue builtIn="false" value="SDL2"/>
+									<listOptionValue builtIn="false" value="pthread"/>
+									<listOptionValue builtIn="false" value="SDL2_ttf"/>
+									<listOptionValue builtIn="false" value="SDL2_image"/>
+									<listOptionValue builtIn="false" value="bcm_host"/>
+								</option>
+								<option id="gnu.cpp.link.option.paths.161224639" name="Library search path (-L)" superClass="gnu.cpp.link.option.paths" useByScannerDiscovery="false" valueType="libPaths">
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/lib/linux_lib}&quot;"/>
+								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.linker.input.1769385259" superClass="cdt.managedbuild.tool.gnu.cpp.linker.input">
 									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
 									<additionalInput kind="additionalinput" paths="$(LIBS)"/>
@@ -42,12 +78,32 @@
 							</tool>
 						</toolChain>
 					</folderInfo>
+					<folderInfo id="cdt.managedbuild.config.gnu.cross.exe.debug.744832774.1863617604" name="/" resourcePath="source">
+						<toolChain id="cdt.managedbuild.toolchain.gnu.cross.exe.debug.955925447" name="Cross GCC" superClass="cdt.managedbuild.toolchain.gnu.cross.exe.debug" unusedChildren="">
+							<targetPlatform archList="all" binaryParser="org.eclipse.cdt.core.ELF" id="cdt.managedbuild.targetPlatform.gnu.cross" isAbstract="false" osList="all" superClass="cdt.managedbuild.targetPlatform.gnu.cross"/>
+							<tool id="cdt.managedbuild.tool.gnu.cross.c.compiler.2021287269" name="Cross GCC Compiler" superClass="cdt.managedbuild.tool.gnu.cross.c.compiler.754539646">
+								<option id="gnu.c.compiler.option.debugging.level.1960363212" name="Debug Level" superClass="gnu.c.compiler.option.debugging.level" useByScannerDiscovery="false" value="gnu.c.debugging.level.default" valueType="enumerated"/>
+								<inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.360679117" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
+							</tool>
+							<tool id="cdt.managedbuild.tool.gnu.cross.cpp.compiler.501118001" name="Cross G++ Compiler" superClass="cdt.managedbuild.tool.gnu.cross.cpp.compiler.1217939782">
+								<option id="gnu.cpp.compiler.option.optimization.level.1562640114" name="Optimization Level" superClass="gnu.cpp.compiler.option.optimization.level" useByScannerDiscovery="false" value="gnu.cpp.compiler.optimization.level.more" valueType="enumerated"/>
+								<option id="gnu.cpp.compiler.option.debugging.level.1558462520" name="Debug Level" superClass="gnu.cpp.compiler.option.debugging.level" useByScannerDiscovery="false" value="gnu.cpp.compiler.debugging.level.default" valueType="enumerated"/>
+								<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.1311455250" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
+							</tool>
+							<tool id="cdt.managedbuild.tool.gnu.cross.c.linker.1350298059" name="Cross GCC Linker" superClass="cdt.managedbuild.tool.gnu.cross.c.linker.1144876255"/>
+							<tool id="cdt.managedbuild.tool.gnu.cross.cpp.linker.1238263870" name="Cross G++ Linker" superClass="cdt.managedbuild.tool.gnu.cross.cpp.linker.2060045245"/>
+							<tool id="cdt.managedbuild.tool.gnu.cross.archiver.1709280150" name="Cross GCC Archiver" superClass="cdt.managedbuild.tool.gnu.cross.archiver.1654260883"/>
+							<tool id="cdt.managedbuild.tool.gnu.cross.assembler.1129446040" name="Cross GCC Assembler" superClass="cdt.managedbuild.tool.gnu.cross.assembler.268436896">
+								<inputType id="cdt.managedbuild.tool.gnu.assembler.input.113724443" superClass="cdt.managedbuild.tool.gnu.assembler.input"/>
+							</tool>
+						</toolChain>
+					</folderInfo>
 				</configuration>
 			</storageModule>
 			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
 		</cconfiguration>
 		<cconfiguration id="cdt.managedbuild.config.gnu.cross.exe.release.207340937">
-			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="cdt.managedbuild.config.gnu.cross.exe.release.207340937" moduleId="org.eclipse.cdt.core.settings" name="Release_with_Cross GCC">
+			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="cdt.managedbuild.config.gnu.cross.exe.release.207340937" moduleId="org.eclipse.cdt.core.settings" name="Release_with_Cross_GCC">
 				<externalSettings/>
 				<extensions>
 					<extension id="org.eclipse.cdt.core.ELF" point="org.eclipse.cdt.core.BinaryParser"/>
@@ -59,23 +115,56 @@
 				</extensions>
 			</storageModule>
 			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
-				<configuration artifactName="${ProjName}" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.exe" buildProperties="org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.exe,org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.release" cleanCommand="rm -rf" description="" id="cdt.managedbuild.config.gnu.cross.exe.release.207340937" name="Release_with_Cross GCC" parent="cdt.managedbuild.config.gnu.cross.exe.release">
+				<configuration artifactName="${ProjName}" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.exe" buildProperties="org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.exe,org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.release" cleanCommand="rm -rf" description="" id="cdt.managedbuild.config.gnu.cross.exe.release.207340937" name="Release_with_Cross_GCC" parent="cdt.managedbuild.config.gnu.cross.exe.release">
 					<folderInfo id="cdt.managedbuild.config.gnu.cross.exe.release.207340937." name="/" resourcePath="">
 						<toolChain id="cdt.managedbuild.toolchain.gnu.cross.exe.release.901638446" name="Cross GCC" superClass="cdt.managedbuild.toolchain.gnu.cross.exe.release">
+							<option id="cdt.managedbuild.option.gnu.cross.path.1305888619" name="Path" superClass="cdt.managedbuild.option.gnu.cross.path" useByScannerDiscovery="false" value="C:\SysGCC\Raspberry\bin" valueType="string"/>
+							<option id="cdt.managedbuild.option.gnu.cross.prefix.97431065" name="Prefix" superClass="cdt.managedbuild.option.gnu.cross.prefix" useByScannerDiscovery="false" value="arm-linux-gnueabihf-" valueType="string"/>
 							<targetPlatform archList="all" binaryParser="org.eclipse.cdt.core.ELF" id="cdt.managedbuild.targetPlatform.gnu.cross.1791967427" isAbstract="false" osList="all" superClass="cdt.managedbuild.targetPlatform.gnu.cross"/>
-							<builder buildPath="${workspace_loc:/WarGame}/Release_with_Cross GCC" id="cdt.managedbuild.builder.gnu.cross.770650108" managedBuildOn="true" name="Gnu Make Builder.Release" superClass="cdt.managedbuild.builder.gnu.cross"/>
+							<builder buildPath="${workspace_loc:/WarGame}/Release_with_Cross GCC" id="cdt.managedbuild.builder.gnu.cross.770650108" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="Gnu Make Builder" superClass="cdt.managedbuild.builder.gnu.cross"/>
 							<tool id="cdt.managedbuild.tool.gnu.cross.c.compiler.824042853" name="Cross GCC Compiler" superClass="cdt.managedbuild.tool.gnu.cross.c.compiler">
-								<option defaultValue="gnu.c.optimization.level.most" id="gnu.c.compiler.option.optimization.level.1452171596" superClass="gnu.c.compiler.option.optimization.level" valueType="enumerated"/>
-								<option id="gnu.c.compiler.option.debugging.level.1965189655" superClass="gnu.c.compiler.option.debugging.level" value="gnu.c.debugging.level.none" valueType="enumerated"/>
+								<option defaultValue="gnu.c.optimization.level.most" id="gnu.c.compiler.option.optimization.level.1452171596" name="Optimization Level" superClass="gnu.c.compiler.option.optimization.level" useByScannerDiscovery="false" valueType="enumerated"/>
+								<option id="gnu.c.compiler.option.debugging.level.1965189655" name="Debug Level" superClass="gnu.c.compiler.option.debugging.level" useByScannerDiscovery="false" value="gnu.c.debugging.level.none" valueType="enumerated"/>
+								<option id="gnu.c.compiler.option.include.paths.1258881818" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" useByScannerDiscovery="false" valueType="includePath">
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/source}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/source/gui}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/source/gfx}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/lib/win32_image.2.0.2/include/SDL2}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/lib/win32_ttf.2.0.14/include/SDL2}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/lib/win32_sdl.2.0.7/include/SDL2}&quot;"/>
+								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.901004163" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
 							</tool>
 							<tool id="cdt.managedbuild.tool.gnu.cross.cpp.compiler.516460817" name="Cross G++ Compiler" superClass="cdt.managedbuild.tool.gnu.cross.cpp.compiler">
-								<option id="gnu.cpp.compiler.option.optimization.level.920366074" superClass="gnu.cpp.compiler.option.optimization.level" value="gnu.cpp.compiler.optimization.level.most" valueType="enumerated"/>
-								<option id="gnu.cpp.compiler.option.debugging.level.410279008" superClass="gnu.cpp.compiler.option.debugging.level" value="gnu.cpp.compiler.debugging.level.none" valueType="enumerated"/>
+								<option id="gnu.cpp.compiler.option.optimization.level.920366074" name="Optimization Level" superClass="gnu.cpp.compiler.option.optimization.level" useByScannerDiscovery="false" value="gnu.cpp.compiler.optimization.level.most" valueType="enumerated"/>
+								<option id="gnu.cpp.compiler.option.debugging.level.410279008" name="Debug Level" superClass="gnu.cpp.compiler.option.debugging.level" useByScannerDiscovery="false" value="gnu.cpp.compiler.debugging.level.none" valueType="enumerated"/>
+								<option id="gnu.cpp.compiler.option.include.paths.576447061" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" useByScannerDiscovery="false" valueType="includePath">
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/source}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/source/openCV}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/source/gui/calibration}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/source/gui/tiledmap}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/source/gui}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/source/gfx}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/lib/win32_ttf.2.0.14/include/SDL2}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/lib/win32_image.2.0.2/include/SDL2}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/lib/win32_sdl.2.0.7/include/SDL2}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;C:\SysGCC\Raspberry\arm-linux-gnueabihf\sysroot\usr\include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;C:\SysGCC\Raspberry\arm-linux-gnueabihf\include&quot;"/>
+								</option>
+								<option id="gnu.cpp.compiler.option.dialect.std.444419540" name="Language standard" superClass="gnu.cpp.compiler.option.dialect.std" useByScannerDiscovery="true" value="gnu.cpp.compiler.dialect.c++11" valueType="enumerated"/>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.693446326" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
 							</tool>
 							<tool id="cdt.managedbuild.tool.gnu.cross.c.linker.431391941" name="Cross GCC Linker" superClass="cdt.managedbuild.tool.gnu.cross.c.linker"/>
 							<tool id="cdt.managedbuild.tool.gnu.cross.cpp.linker.1242539200" name="Cross G++ Linker" superClass="cdt.managedbuild.tool.gnu.cross.cpp.linker">
+								<option id="gnu.cpp.link.option.libs.1451900999" name="Libraries (-l)" superClass="gnu.cpp.link.option.libs" useByScannerDiscovery="false" valueType="libs">
+									<listOptionValue builtIn="false" value="SDL2"/>
+									<listOptionValue builtIn="false" value="SDL2_ttf"/>
+									<listOptionValue builtIn="false" value="bcm_host"/>
+									<listOptionValue builtIn="false" value="SDL2_image"/>
+								</option>
+								<option id="gnu.cpp.link.option.paths.2139539862" name="Library search path (-L)" superClass="gnu.cpp.link.option.paths" useByScannerDiscovery="false" valueType="libPaths">
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/lib/linux_lib}&quot;"/>
+								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.linker.input.1389667524" superClass="cdt.managedbuild.tool.gnu.cpp.linker.input">
 									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
 									<additionalInput kind="additionalinput" paths="$(LIBS)"/>
@@ -87,8 +176,29 @@
 							</tool>
 						</toolChain>
 					</folderInfo>
+					<folderInfo id="cdt.managedbuild.config.gnu.cross.exe.release.207340937.1944556577" name="/" resourcePath="source">
+						<toolChain id="cdt.managedbuild.toolchain.gnu.cross.exe.release.1057259580" name="Cross GCC" superClass="cdt.managedbuild.toolchain.gnu.cross.exe.release" unusedChildren="">
+							<targetPlatform archList="all" binaryParser="org.eclipse.cdt.core.ELF" id="cdt.managedbuild.targetPlatform.gnu.cross" isAbstract="false" osList="all" superClass="cdt.managedbuild.targetPlatform.gnu.cross"/>
+							<tool id="cdt.managedbuild.tool.gnu.cross.c.compiler.2132608654" name="Cross GCC Compiler" superClass="cdt.managedbuild.tool.gnu.cross.c.compiler.824042853">
+								<option id="gnu.c.compiler.option.debugging.level.432286742" name="Debug Level" superClass="gnu.c.compiler.option.debugging.level" value="gnu.c.debugging.level.default" valueType="enumerated"/>
+								<inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.130746818" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
+							</tool>
+							<tool id="cdt.managedbuild.tool.gnu.cross.cpp.compiler.2076819903" name="Cross G++ Compiler" superClass="cdt.managedbuild.tool.gnu.cross.cpp.compiler.516460817">
+								<option id="gnu.cpp.compiler.option.optimization.level.1985541400" name="Optimization Level" superClass="gnu.cpp.compiler.option.optimization.level" value="gnu.cpp.compiler.optimization.level.more" valueType="enumerated"/>
+								<option id="gnu.cpp.compiler.option.debugging.level.388248530" name="Debug Level" superClass="gnu.cpp.compiler.option.debugging.level" value="gnu.cpp.compiler.debugging.level.default" valueType="enumerated"/>
+								<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.1592622080" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
+							</tool>
+							<tool id="cdt.managedbuild.tool.gnu.cross.c.linker.1023655081" name="Cross GCC Linker" superClass="cdt.managedbuild.tool.gnu.cross.c.linker.431391941"/>
+							<tool id="cdt.managedbuild.tool.gnu.cross.cpp.linker.1896834424" name="Cross G++ Linker" superClass="cdt.managedbuild.tool.gnu.cross.cpp.linker.1242539200"/>
+							<tool id="cdt.managedbuild.tool.gnu.cross.archiver.834989019" name="Cross GCC Archiver" superClass="cdt.managedbuild.tool.gnu.cross.archiver.537604577"/>
+							<tool id="cdt.managedbuild.tool.gnu.cross.assembler.703724096" name="Cross GCC Assembler" superClass="cdt.managedbuild.tool.gnu.cross.assembler.420229954">
+								<inputType id="cdt.managedbuild.tool.gnu.assembler.input.952082433" superClass="cdt.managedbuild.tool.gnu.assembler.input"/>
+							</tool>
+						</toolChain>
+					</folderInfo>
 				</configuration>
 			</storageModule>
+			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
 		</cconfiguration>
 		<cconfiguration id="cdt.managedbuild.config.gnu.mingw.exe.debug.2087420743">
 			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="cdt.managedbuild.config.gnu.mingw.exe.debug.2087420743" moduleId="org.eclipse.cdt.core.settings" name="Debug_with_MinGW GCC">
@@ -105,23 +215,58 @@
 					<folderInfo id="cdt.managedbuild.config.gnu.mingw.exe.debug.2087420743." name="/" resourcePath="">
 						<toolChain id="cdt.managedbuild.toolchain.gnu.mingw.exe.debug.1335987556" name="MinGW GCC" superClass="cdt.managedbuild.toolchain.gnu.mingw.exe.debug">
 							<targetPlatform id="cdt.managedbuild.target.gnu.platform.mingw.exe.debug.394538553" name="Debug Platform" superClass="cdt.managedbuild.target.gnu.platform.mingw.exe.debug"/>
-							<builder buildPath="${workspace_loc:/WarGame}/Debug_with_MinGW GCC" id="cdt.managedbuild.tool.gnu.builder.mingw.base.1737793327" managedBuildOn="true" name="CDT Internal Builder.Debug" superClass="cdt.managedbuild.tool.gnu.builder.mingw.base"/>
-							<tool id="cdt.managedbuild.tool.gnu.assembler.mingw.exe.debug.846562500" name="GCC Assembler" superClass="cdt.managedbuild.tool.gnu.assembler.mingw.exe.debug">
+							<builder buildPath="${workspace_loc:/WarGame}/Debug_with_MinGW GCC" id="cdt.managedbuild.tool.gnu.builder.mingw.base.1737793327" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="CDT Internal Builder" superClass="cdt.managedbuild.tool.gnu.builder.mingw.base"/>
+							<tool command="as" commandLinePattern="${COMMAND} ${FLAGS} ${OUTPUT_FLAG} ${OUTPUT_PREFIX}${OUTPUT} ${INPUTS}" id="cdt.managedbuild.tool.gnu.assembler.mingw.exe.debug.846562500" name="GCC Assembler" superClass="cdt.managedbuild.tool.gnu.assembler.mingw.exe.debug">
 								<inputType id="cdt.managedbuild.tool.gnu.assembler.input.1594980169" superClass="cdt.managedbuild.tool.gnu.assembler.input"/>
 							</tool>
 							<tool id="cdt.managedbuild.tool.gnu.archiver.mingw.base.1274636842" name="GCC Archiver" superClass="cdt.managedbuild.tool.gnu.archiver.mingw.base"/>
 							<tool id="cdt.managedbuild.tool.gnu.cpp.compiler.mingw.exe.debug.988703185" name="GCC C++ Compiler" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.mingw.exe.debug">
-								<option id="gnu.cpp.compiler.mingw.exe.debug.option.optimization.level.1687434185" superClass="gnu.cpp.compiler.mingw.exe.debug.option.optimization.level" value="gnu.cpp.compiler.optimization.level.none" valueType="enumerated"/>
-								<option id="gnu.cpp.compiler.mingw.exe.debug.option.debugging.level.743120119" superClass="gnu.cpp.compiler.mingw.exe.debug.option.debugging.level" value="gnu.cpp.compiler.debugging.level.max" valueType="enumerated"/>
+								<option id="gnu.cpp.compiler.mingw.exe.debug.option.optimization.level.1687434185" name="Optimization Level" superClass="gnu.cpp.compiler.mingw.exe.debug.option.optimization.level" useByScannerDiscovery="false" value="gnu.cpp.compiler.optimization.level.none" valueType="enumerated"/>
+								<option id="gnu.cpp.compiler.mingw.exe.debug.option.debugging.level.743120119" name="Debug Level" superClass="gnu.cpp.compiler.mingw.exe.debug.option.debugging.level" useByScannerDiscovery="false" value="gnu.cpp.compiler.debugging.level.max" valueType="enumerated"/>
+								<option id="gnu.cpp.compiler.option.include.paths.163042371" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" useByScannerDiscovery="false" valueType="includePath">
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/source}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/source/openCV}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/source/gui/calibration}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/source/gui/tiledmap}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/source/gui}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/source/gfx}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/lib/win32_ttf.2.0.14/include/SDL2}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/lib/win32_image.2.0.2/include/SDL2}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/lib/win32_sdl.2.0.7/include/SDL2}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;C:\SysGCC\Raspberry\arm-linux-gnueabihf\sysroot\usr\include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;C:\SysGCC\Raspberry\arm-linux-gnueabihf\include&quot;"/>
+								</option>
+								<option id="gnu.cpp.compiler.option.dialect.std.59308228" name="Language standard" superClass="gnu.cpp.compiler.option.dialect.std" useByScannerDiscovery="true" value="gnu.cpp.compiler.dialect.default" valueType="enumerated"/>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.2012760239" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
 							</tool>
 							<tool id="cdt.managedbuild.tool.gnu.c.compiler.mingw.exe.debug.1612744619" name="GCC C Compiler" superClass="cdt.managedbuild.tool.gnu.c.compiler.mingw.exe.debug">
-								<option defaultValue="gnu.c.optimization.level.none" id="gnu.c.compiler.mingw.exe.debug.option.optimization.level.1328913071" superClass="gnu.c.compiler.mingw.exe.debug.option.optimization.level" valueType="enumerated"/>
-								<option id="gnu.c.compiler.mingw.exe.debug.option.debugging.level.811871689" superClass="gnu.c.compiler.mingw.exe.debug.option.debugging.level" value="gnu.c.debugging.level.max" valueType="enumerated"/>
+								<option defaultValue="gnu.c.optimization.level.none" id="gnu.c.compiler.mingw.exe.debug.option.optimization.level.1328913071" name="Optimization Level" superClass="gnu.c.compiler.mingw.exe.debug.option.optimization.level" useByScannerDiscovery="false" valueType="enumerated"/>
+								<option id="gnu.c.compiler.mingw.exe.debug.option.debugging.level.811871689" name="Debug Level" superClass="gnu.c.compiler.mingw.exe.debug.option.debugging.level" useByScannerDiscovery="false" value="gnu.c.debugging.level.max" valueType="enumerated"/>
+								<option id="gnu.c.compiler.option.include.paths.1060843491" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" useByScannerDiscovery="false" valueType="includePath">
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/source}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/source/gui}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/source/gfx}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/lib/win32_image.2.0.2/include/SDL2}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/lib/win32_ttf.2.0.14/include/SDL2}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/lib/win32_sdl.2.0.7/include/SDL2}&quot;"/>
+								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.2113875614" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
 							</tool>
 							<tool id="cdt.managedbuild.tool.gnu.c.linker.mingw.exe.debug.1356550551" name="MinGW C Linker" superClass="cdt.managedbuild.tool.gnu.c.linker.mingw.exe.debug"/>
 							<tool id="cdt.managedbuild.tool.gnu.cpp.linker.mingw.exe.debug.572475255" name="MinGW C++ Linker" superClass="cdt.managedbuild.tool.gnu.cpp.linker.mingw.exe.debug">
+								<option id="gnu.cpp.link.option.libs.776331782" name="Libraries (-l)" superClass="gnu.cpp.link.option.libs" useByScannerDiscovery="false" valueType="libs">
+									<listOptionValue builtIn="false" value="mingw32"/>
+									<listOptionValue builtIn="false" value="SDL2main"/>
+									<listOptionValue builtIn="false" value="SDL2"/>
+									<listOptionValue builtIn="false" value="SDL2_ttf"/>
+									<listOptionValue builtIn="false" value="SDL2_image"/>
+								</option>
+								<option id="gnu.cpp.link.option.paths.272520680" name="Library search path (-L)" superClass="gnu.cpp.link.option.paths" useByScannerDiscovery="false" valueType="libPaths">
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/lib/win32_sdl.2.0.7/lib}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/lib/win32_image.2.0.2/lib}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/lib/win32_ttf.2.0.14/lib}&quot;"/>
+								</option>
+								<option id="gnu.cpp.link.option.flags.1151522044" name="Linker flags" superClass="gnu.cpp.link.option.flags" useByScannerDiscovery="false" value="-static-libgcc -static-libstdc++" valueType="string"/>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.linker.input.1057977963" superClass="cdt.managedbuild.tool.gnu.cpp.linker.input">
 									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
 									<additionalInput kind="additionalinput" paths="$(LIBS)"/>
@@ -129,8 +274,30 @@
 							</tool>
 						</toolChain>
 					</folderInfo>
+					<folderInfo id="cdt.managedbuild.config.gnu.mingw.exe.debug.2087420743.711710103" name="/" resourcePath="source">
+						<toolChain id="cdt.managedbuild.toolchain.gnu.mingw.exe.debug.8678424" name="MinGW GCC" superClass="cdt.managedbuild.toolchain.gnu.mingw.exe.debug" unusedChildren="">
+							<targetPlatform id="cdt.managedbuild.target.gnu.platform.mingw.exe.debug" name="Debug Platform" superClass="cdt.managedbuild.target.gnu.platform.mingw.exe.debug"/>
+							<tool id="cdt.managedbuild.tool.gnu.assembler.mingw.exe.debug.1860461595" name="GCC Assembler" superClass="cdt.managedbuild.tool.gnu.assembler.mingw.exe.debug.846562500">
+								<inputType id="cdt.managedbuild.tool.gnu.assembler.input.775713001" superClass="cdt.managedbuild.tool.gnu.assembler.input"/>
+							</tool>
+							<tool id="cdt.managedbuild.tool.gnu.archiver.mingw.base.1773851144" name="GCC Archiver" superClass="cdt.managedbuild.tool.gnu.archiver.mingw.base.1274636842"/>
+							<tool id="cdt.managedbuild.tool.gnu.cpp.compiler.mingw.exe.debug.963590092" name="GCC C++ Compiler" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.mingw.exe.debug.988703185">
+								<option id="gnu.cpp.compiler.mingw.exe.debug.option.optimization.level.512121923" name="Optimization Level" superClass="gnu.cpp.compiler.mingw.exe.debug.option.optimization.level" useByScannerDiscovery="false" value="gnu.cpp.compiler.optimization.level.more" valueType="enumerated"/>
+								<option id="gnu.cpp.compiler.mingw.exe.debug.option.debugging.level.298423068" name="Debug Level" superClass="gnu.cpp.compiler.mingw.exe.debug.option.debugging.level" useByScannerDiscovery="false" value="gnu.cpp.compiler.debugging.level.default" valueType="enumerated"/>
+								<option id="gnu.cpp.compiler.option.dialect.std.1244580975" name="Language standard" superClass="gnu.cpp.compiler.option.dialect.std" useByScannerDiscovery="true" value="false" valueType="enumerated"/>
+								<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.1762315042" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
+							</tool>
+							<tool id="cdt.managedbuild.tool.gnu.c.compiler.mingw.exe.debug.1135221798" name="GCC C Compiler" superClass="cdt.managedbuild.tool.gnu.c.compiler.mingw.exe.debug.1612744619">
+								<option id="gnu.c.compiler.mingw.exe.debug.option.debugging.level.728577859" name="Debug Level" superClass="gnu.c.compiler.mingw.exe.debug.option.debugging.level" useByScannerDiscovery="false" value="gnu.c.debugging.level.default" valueType="enumerated"/>
+								<inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.1898652606" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
+							</tool>
+							<tool id="cdt.managedbuild.tool.gnu.c.linker.mingw.exe.debug.408891160" name="MinGW C Linker" superClass="cdt.managedbuild.tool.gnu.c.linker.mingw.exe.debug.1356550551"/>
+							<tool id="cdt.managedbuild.tool.gnu.cpp.linker.mingw.exe.debug.1493970927" name="MinGW C++ Linker" superClass="cdt.managedbuild.tool.gnu.cpp.linker.mingw.exe.debug.572475255"/>
+						</toolChain>
+					</folderInfo>
 				</configuration>
 			</storageModule>
+			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
 		</cconfiguration>
 		<cconfiguration id="cdt.managedbuild.config.gnu.mingw.exe.release.1402084468">
 			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="cdt.managedbuild.config.gnu.mingw.exe.release.1402084468" moduleId="org.eclipse.cdt.core.settings" name="Release_with_MinGW GCC">
@@ -147,23 +314,45 @@
 					<folderInfo id="cdt.managedbuild.config.gnu.mingw.exe.release.1402084468." name="/" resourcePath="">
 						<toolChain id="cdt.managedbuild.toolchain.gnu.mingw.exe.release.1625483640" name="MinGW GCC" superClass="cdt.managedbuild.toolchain.gnu.mingw.exe.release">
 							<targetPlatform id="cdt.managedbuild.target.gnu.platform.mingw.exe.release.1671359808" name="Debug Platform" superClass="cdt.managedbuild.target.gnu.platform.mingw.exe.release"/>
-							<builder buildPath="${workspace_loc:/WarGame}/Release_with_MinGW GCC" id="cdt.managedbuild.tool.gnu.builder.mingw.base.472156290" managedBuildOn="true" name="CDT Internal Builder.Release" superClass="cdt.managedbuild.tool.gnu.builder.mingw.base"/>
+							<builder buildPath="${workspace_loc:/WarGame}/Release_with_MinGW GCC" id="cdt.managedbuild.tool.gnu.builder.mingw.base.472156290" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="CDT Internal Builder" superClass="cdt.managedbuild.tool.gnu.builder.mingw.base"/>
 							<tool id="cdt.managedbuild.tool.gnu.assembler.mingw.exe.release.1156300511" name="GCC Assembler" superClass="cdt.managedbuild.tool.gnu.assembler.mingw.exe.release">
 								<inputType id="cdt.managedbuild.tool.gnu.assembler.input.224160160" superClass="cdt.managedbuild.tool.gnu.assembler.input"/>
 							</tool>
 							<tool id="cdt.managedbuild.tool.gnu.archiver.mingw.base.415808503" name="GCC Archiver" superClass="cdt.managedbuild.tool.gnu.archiver.mingw.base"/>
 							<tool id="cdt.managedbuild.tool.gnu.cpp.compiler.mingw.exe.release.826834774" name="GCC C++ Compiler" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.mingw.exe.release">
-								<option id="gnu.cpp.compiler.mingw.exe.release.option.optimization.level.691342189" superClass="gnu.cpp.compiler.mingw.exe.release.option.optimization.level" value="gnu.cpp.compiler.optimization.level.most" valueType="enumerated"/>
-								<option id="gnu.cpp.compiler.mingw.exe.release.option.debugging.level.43692545" superClass="gnu.cpp.compiler.mingw.exe.release.option.debugging.level" value="gnu.cpp.compiler.debugging.level.none" valueType="enumerated"/>
+								<option id="gnu.cpp.compiler.mingw.exe.release.option.optimization.level.691342189" name="Optimization Level" superClass="gnu.cpp.compiler.mingw.exe.release.option.optimization.level" useByScannerDiscovery="false" value="gnu.cpp.compiler.optimization.level.most" valueType="enumerated"/>
+								<option id="gnu.cpp.compiler.mingw.exe.release.option.debugging.level.43692545" name="Debug Level" superClass="gnu.cpp.compiler.mingw.exe.release.option.debugging.level" useByScannerDiscovery="false" value="gnu.cpp.compiler.debugging.level.none" valueType="enumerated"/>
+								<option id="gnu.cpp.compiler.option.include.paths.1355577486" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" useByScannerDiscovery="false" valueType="includePath">
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/source}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/source/openCV}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/source/gui/calibration}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/source/gui/tiledmap}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/source/gui}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/source/gfx}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/lib/win32_ttf.2.0.14/include/SDL2}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/lib/win32_image.2.0.2/include/SDL2}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/lib/win32_sdl.2.0.7/include/SDL2}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;C:\SysGCC\Raspberry\arm-linux-gnueabihf\sysroot\usr\include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;C:\SysGCC\Raspberry\arm-linux-gnueabihf\include&quot;"/>
+								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.1058879053" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
 							</tool>
 							<tool id="cdt.managedbuild.tool.gnu.c.compiler.mingw.exe.release.42267496" name="GCC C Compiler" superClass="cdt.managedbuild.tool.gnu.c.compiler.mingw.exe.release">
-								<option defaultValue="gnu.c.optimization.level.most" id="gnu.c.compiler.mingw.exe.release.option.optimization.level.1726584665" superClass="gnu.c.compiler.mingw.exe.release.option.optimization.level" valueType="enumerated"/>
-								<option id="gnu.c.compiler.mingw.exe.release.option.debugging.level.1691408386" superClass="gnu.c.compiler.mingw.exe.release.option.debugging.level" value="gnu.c.debugging.level.none" valueType="enumerated"/>
+								<option defaultValue="gnu.c.optimization.level.most" id="gnu.c.compiler.mingw.exe.release.option.optimization.level.1726584665" name="Optimization Level" superClass="gnu.c.compiler.mingw.exe.release.option.optimization.level" useByScannerDiscovery="false" valueType="enumerated"/>
+								<option id="gnu.c.compiler.mingw.exe.release.option.debugging.level.1691408386" name="Debug Level" superClass="gnu.c.compiler.mingw.exe.release.option.debugging.level" useByScannerDiscovery="false" value="gnu.c.debugging.level.none" valueType="enumerated"/>
+								<option id="gnu.c.compiler.option.include.paths.1026400805" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" useByScannerDiscovery="false" valueType="includePath">
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/source}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/source/gui}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/source/gfx}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/lib/win32_image.2.0.2/include/SDL2}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/lib/win32_ttf.2.0.14/include/SDL2}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/lib/win32_sdl.2.0.7/include/SDL2}&quot;"/>
+								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.1056630272" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
 							</tool>
 							<tool id="cdt.managedbuild.tool.gnu.c.linker.mingw.exe.release.997008687" name="MinGW C Linker" superClass="cdt.managedbuild.tool.gnu.c.linker.mingw.exe.release"/>
 							<tool id="cdt.managedbuild.tool.gnu.cpp.linker.mingw.exe.release.520314375" name="MinGW C++ Linker" superClass="cdt.managedbuild.tool.gnu.cpp.linker.mingw.exe.release">
+								<option id="gnu.cpp.link.option.flags.1303952914" name="Linker flags" superClass="gnu.cpp.link.option.flags" useByScannerDiscovery="false" value="-static-libgcc -static-libstdc++" valueType="string"/>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.linker.input.262077218" superClass="cdt.managedbuild.tool.gnu.cpp.linker.input">
 									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
 									<additionalInput kind="additionalinput" paths="$(LIBS)"/>
@@ -171,8 +360,29 @@
 							</tool>
 						</toolChain>
 					</folderInfo>
+					<folderInfo id="cdt.managedbuild.config.gnu.mingw.exe.release.1402084468.977019711" name="/" resourcePath="source">
+						<toolChain id="cdt.managedbuild.toolchain.gnu.mingw.exe.release.74906505" name="MinGW GCC" superClass="cdt.managedbuild.toolchain.gnu.mingw.exe.release" unusedChildren="">
+							<targetPlatform id="cdt.managedbuild.target.gnu.platform.mingw.exe.release" name="Debug Platform" superClass="cdt.managedbuild.target.gnu.platform.mingw.exe.release"/>
+							<tool id="cdt.managedbuild.tool.gnu.assembler.mingw.exe.release.1253685439" name="GCC Assembler" superClass="cdt.managedbuild.tool.gnu.assembler.mingw.exe.release.1156300511">
+								<inputType id="cdt.managedbuild.tool.gnu.assembler.input.940429679" superClass="cdt.managedbuild.tool.gnu.assembler.input"/>
+							</tool>
+							<tool id="cdt.managedbuild.tool.gnu.archiver.mingw.base.1595254012" name="GCC Archiver" superClass="cdt.managedbuild.tool.gnu.archiver.mingw.base.415808503"/>
+							<tool id="cdt.managedbuild.tool.gnu.cpp.compiler.mingw.exe.release.2041025663" name="GCC C++ Compiler" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.mingw.exe.release.826834774">
+								<option id="gnu.cpp.compiler.mingw.exe.release.option.optimization.level.1324146006" name="Optimization Level" superClass="gnu.cpp.compiler.mingw.exe.release.option.optimization.level" value="gnu.cpp.compiler.optimization.level.more" valueType="enumerated"/>
+								<option id="gnu.cpp.compiler.mingw.exe.release.option.debugging.level.942332053" name="Debug Level" superClass="gnu.cpp.compiler.mingw.exe.release.option.debugging.level" value="gnu.cpp.compiler.debugging.level.default" valueType="enumerated"/>
+								<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.2063957232" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
+							</tool>
+							<tool id="cdt.managedbuild.tool.gnu.c.compiler.mingw.exe.release.1779417604" name="GCC C Compiler" superClass="cdt.managedbuild.tool.gnu.c.compiler.mingw.exe.release.42267496">
+								<option id="gnu.c.compiler.mingw.exe.release.option.debugging.level.754125316" name="Debug Level" superClass="gnu.c.compiler.mingw.exe.release.option.debugging.level" value="gnu.c.debugging.level.default" valueType="enumerated"/>
+								<inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.2129254793" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
+							</tool>
+							<tool id="cdt.managedbuild.tool.gnu.c.linker.mingw.exe.release.786129403" name="MinGW C Linker" superClass="cdt.managedbuild.tool.gnu.c.linker.mingw.exe.release.997008687"/>
+							<tool id="cdt.managedbuild.tool.gnu.cpp.linker.mingw.exe.release.1923869600" name="MinGW C++ Linker" superClass="cdt.managedbuild.tool.gnu.cpp.linker.mingw.exe.release.520314375"/>
+						</toolChain>
+					</folderInfo>
 				</configuration>
 			</storageModule>
+			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
 		</cconfiguration>
 	</storageModule>
 	<storageModule moduleId="cdtBuildSystem" version="4.0.0">
@@ -206,4 +416,24 @@
 		</scannerConfigBuildInfo>
 	</storageModule>
 	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
+	<storageModule moduleId="refreshScope" versionNumber="2">
+		<configuration configurationName="Debug_with_MinGW GCC">
+			<resource resourceType="PROJECT" workspacePath="/WarGame"/>
+		</configuration>
+		<configuration configurationName="Release_with_MinGW GCC">
+			<resource resourceType="PROJECT" workspacePath="/WarGame"/>
+		</configuration>
+		<configuration configurationName="Debug_with_Cross_GCC">
+			<resource resourceType="PROJECT" workspacePath="/WarGame"/>
+		</configuration>
+		<configuration configurationName="Release_with_Cross GCC">
+			<resource resourceType="PROJECT" workspacePath="/WarGame"/>
+		</configuration>
+		<configuration configurationName="Debug_with_Cross GCC">
+			<resource resourceType="PROJECT" workspacePath="/WarGame"/>
+		</configuration>
+		<configuration configurationName="Release_with_Cross_GCC"/>
+	</storageModule>
+	<storageModule moduleId="org.eclipse.cdt.make.core.buildtargets"/>
+	<storageModule moduleId="org.eclipse.cdt.internal.ui.text.commentOwnerProjectMappings"/>
 </cproject>

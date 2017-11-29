@@ -20,10 +20,7 @@ IF "%2"=="" (
 SET PUTTYSCP_BIN="C:\Program Files (x86)\WinSCP\pscp.exe"
 SET PUTTY_BIN="C:\Program Files (x86)\WinSCP\putty.exe"
 
-rem SET RASPBERRYPI_ADDR=BoomV
-SET RASPBERRYPI_ADDR=Peezer
-rem SET RASPBERRYPI_ADDR=BoomB
-rem SET RASPBERRYPI_ADDR=BoomM
+SET RASPBERRYPI_ADDR=wargame
 SET USERNAME=pi
 
 SET PASSWORD=raspberry
